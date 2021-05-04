@@ -21,8 +21,8 @@ Automated tests
 
 Manual Tests
 
-1)	Hook up the oscilloscope to verify rise time, fall time of SCL and SDA lines of I2C.
-2)	Hook up the oscilloscope to perform timing calculations and verify if START, STOP, and DATA VALID conditions for I2C slave (MMA8451Q) timing are satisfied.
+1)	Using the oscilloscope, the rise time, fall time for SDA and SCL were verified. 
+2)	Using the oscilloscope, the setup and hold time for Start, Stop and repeated start were verified to be greater the datasheet value and complies with the protocol requirements
 3)	[Error Case] If ACK is not received, check if after a timeout, the communication with the peripheral device was re-initiated (check if red LED was glowing to indicate failure).
 4)	0° calibrate the device at point A and measure level or plumb on horizontal or vertical surfaces. This can be verified by calibrating the ‘Level’ feature of iPhone’s ‘Measure’ app at point A and measuring level and plumb on the same surfaces.
 5)	Tie the FRDM board to the iPhone and measure the angle on the phone (using the ‘Measure’ feature of the ‘Measure’ app) and verify if LED glows with purple, brown or cyan colours for 45°, 60° or 90° tilts. 
