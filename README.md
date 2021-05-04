@@ -1,10 +1,10 @@
 # PES-Final-Project
 Code for Final Project of PES, ECEN-5813,Spring 2021
 
-OBJECTIVE
+OBJECTIVE  
 To develop the logic for a digital angle gauge which is based on the MMA8451Q accelerometer included in the FRDM-KL25Z. User can type commands over the serial port and LEDs glow to indicate outputs/measurements. Apart from being used as a digital angle gauge, it can be used as a digital level that works similar to a spirit level tool which is often used to indicate whether a surface is horizontal (level) or vertical (plumb).
 
-FUNCTIONALITY
+FUNCTIONALITY  
 	If an initialization failure or test case failure exists, red LED glows indicating the error.
 On successful initialization, white LED glows only if all automated test cases for I2C protocol and buffers passed. 
 The device can then be operated in one of the following four modes based on the user commands entered via the command line interface,
@@ -22,7 +22,7 @@ Automated tests
 Manual Tests
 
 1)	Hook up the oscilloscope to verify rise time, fall time of SCL and SDA lines of I2C.
-2)	Hook up the logic analyser to perform timing calculations and verify if START, STOP, and DATA VALID conditions for I2C slave (MMA8451Q) timing are satisfied.
+2)	Hook up the oscilloscope to perform timing calculations and verify if START, STOP, and DATA VALID conditions for I2C slave (MMA8451Q) timing are satisfied.
 3)	[Error Case] If ACK is not received, check if after a timeout, the communication with the peripheral device was re-initiated (check if red LED was glowing to indicate failure).
 4)	0° calibrate the device at point A and measure level or plumb on horizontal or vertical surfaces. This can be verified by calibrating the ‘Level’ feature of iPhone’s ‘Measure’ app at point A and measuring level and plumb on the same surfaces.
 5)	Tie the FRDM board to the iPhone and measure the angle on the phone (using the ‘Measure’ feature of the ‘Measure’ app) and verify if LED glows with purple, brown or cyan colours for 45°, 60° or 90° tilts. 
